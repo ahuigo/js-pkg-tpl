@@ -13,4 +13,4 @@ pkg: gitcheck build
 	git commit -am "$(msg)"
 	git push origin HEAD
 new:
-	cp jestconfig.json package.json tsconfig.json makefile jest.config.ts .gitignore ../proj
+	cp package.json tsconfig.json makefile jest.config.ts .gitignore ../proj

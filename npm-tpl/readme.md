@@ -3,7 +3,7 @@
     yarn add mypkg
     npm i mypkg
 
-## Usage
+## Usage: import pkg
 Add new type: module in package.json
 
     // cat package.json
@@ -17,3 +17,5 @@ Import it in your code:
 
     // app.js
     import * as funcs from 'mypkg'
+## Usage: cli
+    $ hello Alex
