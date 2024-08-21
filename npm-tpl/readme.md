@@ -1,4 +1,5 @@
 # npm pkg template
+Refer: js-fetchx
 ## Install
     yarn add mypkg
     npm i mypkg
