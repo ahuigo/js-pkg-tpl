@@ -14,27 +14,17 @@ export function ProFormSelectStored(props: Props) {
   return <ProFormSelect
     name={props.name}
     label={props.label}
-    width={150}
     options={options}
     initialValue={props.initialValue}
     fieldProps={{
       mode: 'multiple',
       showSearch: true,
-      placeholder: '*模糊wildcard搜索*',
+      placeholder: '*wildcard search*',
       optionFilterProp: 'label', // This is needed to make the search work with label
       notFoundContent: loading ? <Spin size="small" /> : null, // Add this line
       onSearch: (v: string) => {
         console.log(v);
       },
-      onInputKeyDown: (e) => {
-        const target = e.target as HTMLInputElement;
-        console.log({ 'k': e.key, v: target.value });
-        if (e.key === 'Enter') {
-          e.stopPropagation(); // <-- this is the trick
-          //@ts-ignore
-          addOption(e.target.value);
-        }
-      }
     }}
   />;
 };
